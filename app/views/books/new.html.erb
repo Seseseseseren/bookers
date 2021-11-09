@@ -1,3 +1,5 @@
+<%= flash[:notice] %>
+
 <h1>New book</h1>
 <%= form_with model:@book,local:true do |f| %>
 
@@ -10,3 +12,4 @@
   <%= f.submit 'Create Book' %>
 
 <% end %>
+
