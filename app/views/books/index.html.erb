@@ -1,2 +1,15 @@
-<h1>ここが本ページ</h1>
-
+<h2>Books</h2>
+<% @books.each do |book| %>
+  <h3>Title</h3>
+  <span><%= book.title %></span>
+  
+  <h3>Body</h3>
+  <span><%= book.body %></span>
+  <p>Show</p>
+  <p>Edit</p>
+  <p>Destroy</p>
+  
+  <%= link_to "Destroy", book_path(@book), method: :delete %>
+  
+  
+<% end %>
